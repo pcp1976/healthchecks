@@ -48,7 +48,9 @@ INSTALLED_APPS = (
     'hc.accounts',
     'hc.api',
     'hc.front',
-    'hc.payments'
+    'hc.payments',
+    
+    'finalware'
 )
 
 MIDDLEWARE = (
@@ -190,6 +192,11 @@ ZENDESK_CLIENT_SECRET = os.getenv("ZENDESK_CLIENT_ID")
 
 # Trello
 TRELLO_APP_KEY = os.getenv("TRELLO_APP_KEY")
+
+# finalware superuser
+ SITE_SUPERUSER_USERNAME = os.getenv('SITE_SUPERUSER_USERNAME', 'admin')
+ SITE_SUPERUSER_EMAIL = os.getenv('SITE_SUPERUSER_EMAIL', 'admin@example.com')
+ SITE_SUPERUSER_PASSWORD = os.getenv('SITE_SUPERUSER_PASSWORD', 'Password123')
 
 if os.path.exists(os.path.join(BASE_DIR, "hc/local_settings.py")):
     from .local_settings import *

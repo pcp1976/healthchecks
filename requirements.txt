@@ -4,3 +4,4 @@ django_compressor==2.2
 psycopg2==2.7.5
 pytz==2018.5
 requests==2.20.0
+django-finalware=*
